@@ -1,11 +1,11 @@
 var transition = require('transition-property')
-	, classes = require('classes')
-	, cssEvent = require('css-emitter')
-	, once = require('once');
+  , classes = require('classes')
+  , cssEvent = require('css-emitter')
+  , once = require('once');
 
 // API:
 // animate(el, 'fadeOutRight', function(el){
-// 	$(el).remove();
+//  $(el).remove();
 // });
 
 // If transitions aren't supported, call back immediately,
@@ -14,14 +14,14 @@ var transition = require('transition-property')
 module.exports = animate;
 
 function animate(el, className, fn){
-	if (!transition) {
-		if (fn) fn(el);
-		return;
-	}
-	classes(el).add(className);
-	cssEvent(el).bind(once(cleanup));
-	function cleanup(){
-		classes(el).remove(className);
-		if (fn) fn(el);
-	}
+  if (!transition) {
+    if (fn) fn(el);
+    return;
+  }
+  classes(el).add(className);
+  cssEvent(el).bind(once(cleanup));
+  function cleanup(){
+    classes(el).remove(className);
+    if (fn) fn(el);
+  }
 }
