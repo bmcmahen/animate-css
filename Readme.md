@@ -9,10 +9,10 @@ Apply css animations to an element, with a callback for when that animation fini
 
 ## API
 
-  var animate = require('bmcmahen-animate');
-  animate(el, 'fadeOutRight', function(element){
-    $(element).remove();
-  });
+    var animate = require('bmcmahen-animate');
+    animate(el, 'fadeOutRight', function(element){
+      $(element).remove();
+    });
 
 
 ## License
