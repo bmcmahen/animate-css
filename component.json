@@ -1,0 +1,16 @@
+{
+  "name": "animate",
+  "repo": "bmcmahen/animate",
+  "description": "a jquery like api for animations, but for css",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {
+    "component/classes": "*",
+    "ecarter/css-emitter": "*"
+  },
+  "development": {},
+  "license": "MIT",
+  "scripts": [
+    "index.js"
+  ]
+}
