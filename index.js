@@ -18,10 +18,11 @@ function animate(el, className, fn){
     if (fn) fn(el);
     return;
   }
-  classes(el).add(className);
+  var cls = classes(el);
+  cls.add(className);
   cssEvent(el).bind(once(cleanup));
   function cleanup(){
-    classes(el).remove(className);
+    cls.remove(className);
     if (fn) fn(el);
   }
 }

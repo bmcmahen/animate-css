@@ -1,13 +1,67 @@
 <html>
 <head>
 	<title></title>
+	<style>
+		#hello {
+			width: 400px;
+			height: 400px;
+			background: #eee;
+		}
+
+		.animated {
+	-webkit-animation-duration: 1s;
+	   -moz-animation-duration: 1s;
+	     -o-animation-duration: 1s;
+	        animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+	   -moz-animation-fill-mode: both;
+	     -o-animation-fill-mode: both;
+	        animation-fill-mode: both;
+}
+
+		@-webkit-keyframes bounce {
+			0%, 20%, 50%, 80%, 100% {-webkit-transform: translateY(0);}
+			40% {-webkit-transform: translateY(-30px);}
+			60% {-webkit-transform: translateY(-15px);}
+		}
+
+		@-moz-keyframes bounce {
+			0%, 20%, 50%, 80%, 100% {-moz-transform: translateY(0);}
+			40% {-moz-transform: translateY(-30px);}
+			60% {-moz-transform: translateY(-15px);}
+		}
+
+		@-o-keyframes bounce {
+			0%, 20%, 50%, 80%, 100% {-o-transform: translateY(0);}
+			40% {-o-transform: translateY(-30px);}
+			60% {-o-transform: translateY(-15px);}
+		}
+		@keyframes bounce {
+			0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+			40% {transform: translateY(-30px);}
+			60% {transform: translateY(-15px);}
+		}
+
+		.bounce {
+			-webkit-animation-name: bounce;
+			-moz-animation-name: bounce;
+			-o-animation-name: bounce;
+			animation-name: bounce;
+		}
+
+	</style>
 </head>
 <body>
 
+<div id='hello' class='animated'><p> hi there </p></div>
 <script src='../build/build.js' type='text/javascript'></script>
 <script>
-	var transitionEnd = require('animate');
-	console.log(transitionEnd);
+	var animate = require('animate-css');
+	var div = document.getElementById('hello');
+	animate(div, 'bounce', function(el){
+		console.log(el);
+	});
+
 </script>
 
 </body>

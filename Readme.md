@@ -1,7 +1,7 @@
 
 # animate-css
 
-Apply css animations to an element, with a callback for when that animation finishes. If the browser doesn't support transitions, the callback is invoked immediately.
+A small helper for applying CSS animations to an element, with a callback for when that animation finishes. If the browser doesn't support transitions, the callback is invoked immediately. It works well with [animate.css](https://github.com/daneden/animate.css) animations.
 
 ## Installation
 
@@ -9,9 +9,10 @@ Apply css animations to an element, with a callback for when that animation fini
 
 ## API
 
-    var animate = require('bmcmahen-animate');
+    var animate = require('bmcmahen-animate-css');
+    var el = document.getElementById('animate-me');
     animate(el, 'fadeOutRight', function(element){
-      $(element).remove();
+      // Element has finished animating
     });
 
 
