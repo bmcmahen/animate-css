@@ -1,7 +1,7 @@
 
 # animate-css
 
-A small helper for applying CSS animations to an element, with a callback for when that animation finishes. If the browser doesn't support transitions, the callback is invoked immediately. It works well with [animate.css](https://github.com/daneden/animate.css) animations.
+A small helper for applying CSS animations to an element, with a callback for when that animation finishes. If the browser doesn't support animations, the callback is invoked immediately. It works well with [animate.css](https://github.com/daneden/animate.css) animations.
 
 ## Installation
 

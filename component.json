@@ -7,8 +7,8 @@
   "dependencies": {
     "component/classes": "*",
     "ecarter/css-emitter": "*",
-    "bmcmahen/transition-property": "*",
-    "component/once": "*"
+    "component/once": "*",
+    "eugenicsarchivesca/has-css-animations": "*"
   },
   "development": {},
   "license": "MIT",
